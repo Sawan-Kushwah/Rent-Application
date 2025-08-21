@@ -1,4 +1,4 @@
-import { dataNotFound, dataSubmittedSuccessfully, InternalServerError } from "@/app/utils/errorMessage";
+import { dataNotFound, success, InternalServerError } from "@/app/utils/errorMessage";
 import { NextResponse } from "next/server";
 import Room from "../../models/Room";
 import { connectToDB } from "@/app/utils/connectDB";
@@ -17,7 +17,7 @@ export async function POST(req) {
         const res = await newRoom.save();
 
         if (res) {
-            return dataSubmittedSuccessfully("Room data")
+            return success("Room data")
         } else {
             return InternalServerError(res);
         }

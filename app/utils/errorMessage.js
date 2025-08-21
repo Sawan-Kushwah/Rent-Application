@@ -4,7 +4,7 @@ export function dataNotFound(error) {
     return NextResponse.json({ message: `${error} not found` });
 }
 
-export function dataSubmittedSuccessfully(message) {
+export function success(message) {
     return NextResponse.json({ message: `${message} submitted succesfully` });
 }
 
