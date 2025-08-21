@@ -1,3 +1,4 @@
+import ImageUploder from "@/components/ImageUploder";
 import Map from "@/components/Map";
 import Image from "next/image";
 
@@ -102,7 +103,8 @@ export default function Home() {
           </a>
         </footer>
       </div>
-      <Map lat={22.605734171220156} lng={75.68602725696526} />
+      {/* <Map lat={22.605734171220156} lng={75.68602725696526} /> */}
+      <ImageUploder />
 
     </>
   );
