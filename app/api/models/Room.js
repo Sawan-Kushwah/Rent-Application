@@ -1,13 +1,13 @@
-import mongoose ,{Schema} from "mongoose";
+import mongoose, { Schema } from "mongoose";
 
 const schema = new Schema(
   {
     owner: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "rooms",
+      ref: "owners",
       require: true
     },
-    tille: {
+    title: {
       type: String,
       require: true
     },
@@ -24,7 +24,7 @@ const schema = new Schema(
       require: true
     },
     parking: {
-      type:Boolean,
+      type: Boolean,
       require: true
     },
     waterChages: {
@@ -78,10 +78,10 @@ const schema = new Schema(
       require: true
     },
 
-    
+
   },
   {
-    timestamps:true
+    timestamps: true
   }
 );
 
