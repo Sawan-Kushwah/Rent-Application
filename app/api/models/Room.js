@@ -48,7 +48,7 @@ const schema = new Schema(
       require: true
     },
     address: {
-      type: Number,
+      type: String,
       require: true
     },
     houseNo: {
@@ -56,7 +56,7 @@ const schema = new Schema(
       require: true
     },
     colony: {
-      type: Number,
+      type: String,
       require: true
     },
     latitude: {
@@ -77,13 +77,11 @@ const schema = new Schema(
       type: Boolean,
       require: true
     },
-
-
   },
   {
     timestamps: true
   }
 );
 
-const Room = mongoose.models.Room || mongoose.model('Room', postSchema);
+const Room = mongoose.models.Room || mongoose.model('Room', schema);
 export default Room;
